@@ -42,6 +42,7 @@ Column {
         anchors.horizontalCenter: parent.horizontalCenter
 
         ComboBox {
+            displayText: ""
 
             id: selectUser
 
@@ -180,6 +181,7 @@ Column {
 
         TextField {
             id: username
+            font.pointSize: root.font.pointSize
             text: config.ForceLastUser == "true" ? selectUser.currentText : null
             font.capitalization: config.AllowBadUsernames == "false" ? Font.Capitalize : Font.MixedCase
             anchors.centerIn: parent
@@ -229,6 +231,7 @@ Column {
 
         TextField {
             id: password
+            font.pointSize: root.font.pointSize
             anchors.centerIn: parent
             height: root.font.pointSize * 3
             width: parent.width
